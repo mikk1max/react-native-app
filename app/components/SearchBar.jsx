@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 45,
     backgroundColor: "#D3D3D3",
-    borderRadius: "50%",
+    borderRadius: 15,
     paddingHorizontal: 50,
     justifyContent: "center",
     marginVertical: 10,
