@@ -35,4 +35,5 @@ const SearchBarComp = ({ onSearch }) => {
   );
 };
 
+
 export default SearchBarComp;
