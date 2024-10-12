@@ -12,6 +12,7 @@ import SearchBar from "../components/SearchBar";
 import Swiper from "../components/Swiper";
 import IconButton from "../components/IconButton";
 import { useCustomFonts } from "../utils/fonts";
+import ProductCard from "../components/ProductCard";
 
 // Get the screen dimensions
 const { width } = Dimensions.get("window");
@@ -34,6 +35,11 @@ const RentNowView = () => {
   const fontsLoaded = useCustomFonts();
 
   if (!fontsLoaded) return null;
+
+  // Product Cards
+  const onPress = () => console.log(`Pressed`)
+  const productName = "Holey underpants"
+  const productPrice = 5.25
 
   return (
     <View style={styles.container}>
@@ -63,6 +69,16 @@ const RentNowView = () => {
         ))}
       </View>
       {/* /Categories buttons ended/ */}
+
+      {/* Product Cards start */}
+      <View>
+        <ProductCard
+          productName={productName}
+          productPrice={productPrice}
+          onPress={onPress}
+        />
+      </View>
+
     </View>
   );
 };
