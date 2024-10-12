@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     height: 45,
     padding: 0,
     margin: 0,
+    marginTop: 15,
   },
   inputContainer: {
     width: "100%",

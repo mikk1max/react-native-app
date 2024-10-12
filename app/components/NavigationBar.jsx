@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Platform } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
@@ -35,7 +35,7 @@ const renderIcon = (route, focused) => {
   }
 };
 
-const NavigationBar = () => {
+const NavigationBarView = () => {
   const fontsLoaded = useCustomFonts();
 
   if (!fontsLoaded) return null;
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   navbarContainer: {
     flex: 1,
     // backgroundColor: "transparent",
-    marginBottom: 30,
+    marginBottom: Platform.OS === "android" ? 15 : 30,
   },
   tabBarStyle: {
     width: "85%",
@@ -84,4 +84,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default NavigationBar;
+export default NavigationBarView;

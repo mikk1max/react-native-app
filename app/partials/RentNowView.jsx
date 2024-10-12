@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     paddingHorizontal: 25,
     justifyContent: "flex-start",
-    marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 65,
+    marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 50,
   },
   categoryContainer: {
     alignItems: "flex-start",
