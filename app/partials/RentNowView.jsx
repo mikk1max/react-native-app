@@ -117,27 +117,6 @@ const RentNowView = () => {
           {/* /Categories buttons ended/ */}
 
           {/* Product Cards start */}
-          {/* <View
-            style={{
-              flex: 1,
-              flexWrap: "wrap",
-              flexDirection: "row",
-              justifyContent: "space-between",
-            }}
-          >
-            <FlatList 
-              data={filteredProducts}
-              keyExtractor={(product) => product.id.toString()}
-              renderItem={({item}) => (
-                <ProductCard 
-                  key={item.id}
-                  productName={item.name}
-                  productPrice={item.price}
-                  productLink={item.link}
-                />
-              )}
-            />
-          </View> */}
           <View
             style={{
               flex: 1,
@@ -161,8 +140,6 @@ const RentNowView = () => {
           </View>
         </ScrollView>
       </View>
-      
-      
 
     </View>
   );
