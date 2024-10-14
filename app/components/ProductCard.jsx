@@ -4,9 +4,10 @@ import React from 'react'
 import { ScrollView, Image } from 'react-native';
 import { Card, Button, Icon } from 'react-native-elements';
 
+const ProductCard = ({ productName, productPrice, productLink, containerWidth }) => {
+  // Width of card
+  const cardWidth = (containerWidth - 1 * 5) / 2
 
-
-const ProductCard = ({ productName, productPrice, onPress }) => {
   return (
     <View>
       {/* <Text>ProductCard</Text> */}
@@ -14,9 +15,9 @@ const ProductCard = ({ productName, productPrice, onPress }) => {
       <Card
         containerStyle={{
           height: 200,
-          width: 150,
+          width: cardWidth,
           margin: 0,
-          marginTop: 10,
+          marginTop: 15,
           padding: 0,
           borderRadius: 15,
         }}
@@ -36,7 +37,7 @@ const ProductCard = ({ productName, productPrice, onPress }) => {
         />
 
         <TouchableOpacity
-          onPress={onPress}
+          onPress={console.log(productLink)}
           style={{
             backgroundColor: "#525252",
             height: 50,
