@@ -50,6 +50,10 @@ const NavigationBar = () => {
             tabBarShowLabel: false,
             tabBarActiveBackgroundColor: "#161616",
             tabBarStyle: styles.tabBarStyle,
+            tabBarItemStyle: ({ index }) => [
+              styles.tabBarItemStyle,
+              index === 2 && styles.tabBarItemStyleLast,
+            ],
           })}
         >
           <Tab.Screen name="RentNow" component={RentNowView} />
@@ -72,17 +76,27 @@ const NavigationBar = () => {
 const styles = StyleSheet.create({
   navbarContainer: {
     flex: 1,
-    // backgroundColor: "transparent",
     marginBottom: 30,
-    backgroundColor: "transparent"
+    backgroundColor: "transparent",
   },
   tabBarStyle: {
     width: "85%",
     alignSelf: "center",
     borderRadius: 150,
     overflow: "hidden",
-    // backgroundColor: "transparent",
-    // backgroundColor: "blue",
+    borderWidth: 1,
+    borderColor: "black",
+    tabBarItemStyle: {
+      borderRightWidth: 1,
+      borderColor: "black",
+    },
+    tabBarItemStyleLast: {
+      borderRightWidth: 0,
+    },
+    borderRightWidth: 1,
+    borderColor: "black",
+    borderTopWidth: 1,
+    borderTopColor: "black",
   },
 });
 
