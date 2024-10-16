@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Platform } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
@@ -50,9 +50,9 @@ const NavigationBar = () => {
             tabBarShowLabel: false,
             tabBarActiveBackgroundColor: "#161616",
             tabBarStyle: styles.tabBarStyle,
-            tabBarItemStyle: ({ index }) => [
+            tabBarItemStyle: [
               styles.tabBarItemStyle,
-              index === 2 && styles.tabBarItemStyleLast,
+              route.name === "UserProfile" && styles.userProfileTabStyle,
             ],
           })}
         >
@@ -76,27 +76,29 @@ const NavigationBar = () => {
 const styles = StyleSheet.create({
   navbarContainer: {
     flex: 1,
-    marginBottom: 30,
+    marginBottom: Platform.OS == "android" ? 20 : 30,
     backgroundColor: "transparent",
   },
   tabBarStyle: {
-    width: "85%",
+    width: "86%",
     alignSelf: "center",
     borderRadius: 150,
     overflow: "hidden",
     borderWidth: 1,
-    borderColor: "black",
-    tabBarItemStyle: {
-      borderRightWidth: 1,
-      borderColor: "black",
-    },
-    tabBarItemStyleLast: {
-      borderRightWidth: 0,
-    },
-    borderRightWidth: 1,
-    borderColor: "black",
-    borderTopWidth: 1,
     borderTopColor: "black",
+    borderTopWidth: 1,
+    borderColor: "black",
+    boxShadow: "none",
+    shadowColor: "transparent",
+  },
+  tabBarItemStyle: {
+    borderRightWidth: 1,
+    borderColor: "transparent",
+  },
+  userProfileTabStyle: {
+    borderRightWidth: 1,
+    borderLeftWidth: 1,
+    borderColor: "black",
   },
 });
 
