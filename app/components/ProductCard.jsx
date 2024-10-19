@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Card } from 'react-native-elements';
+import { globalStyles } from '../utils/style';
 
 const ProductCard = ({ productName, productPrice, productLink, containerWidth }) => {
   // Width of card
@@ -33,7 +34,7 @@ const ProductCard = ({ productName, productPrice, productLink, containerWidth })
         <TouchableOpacity
           onPress={onPress}
           style={{
-            backgroundColor: "#525252",
+            backgroundColor: globalStyles.primaryColor,
             height: 50,
             width: "100%",
             borderBottomLeftRadius: 15,
@@ -43,13 +44,13 @@ const ProductCard = ({ productName, productPrice, productLink, containerWidth })
           }}
         >
           <Text
-            style={{color: "#ffffff"}}
+            style={{color: globalStyles.textOnPrimaryColor}}
           >
             { productName }
           </Text>
 
           <Text
-            style={{color: "#ffffff"}}
+            style={{color: globalStyles.textOnPrimaryColor}}
           >
             ${ productPrice } / day
           </Text>

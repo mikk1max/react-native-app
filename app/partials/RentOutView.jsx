@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
+import { globalStyles } from "../utils/style";
 
 const RentOutView = () => {
   return (
@@ -8,7 +9,7 @@ const RentOutView = () => {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "white",
+        backgroundColor: globalStyles.backgroundColor,
       }}
     >
       <Text>RentOut Screen</Text>
