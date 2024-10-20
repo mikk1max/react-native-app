@@ -7,5 +7,6 @@ export const globalStyles = {
   textOnAccentColor: "#f4fbf8",
   backgroundColor: "white",
 
-  redColor: "#DC143C"
+  redColor: "#DC143C",
+  blueColor: "#1338BE",
 };
