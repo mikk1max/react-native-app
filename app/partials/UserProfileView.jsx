@@ -115,7 +115,7 @@ const UserProfileView = () => {
               />
               <Text style={styles.buttonText}>Addresses</Text>
             </TouchableOpacity>
-            <View style={{ flexDirection: "row", gap: 20 }}>
+            <View style={{ flexDirection: "row", gap: 15 }}>
               <TouchableOpacity
                 style={[styles.button, styles.buttonRent]}
                 activeOpacity={0.8}
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
     backgroundColor: globalStyles.redColor,
   },
   buttonRent: {
-    width: (width - 50 - 20) / 2,
+    width: (width - 50 - 15) / 2,
   },
 });
 

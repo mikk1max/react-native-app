@@ -3,6 +3,7 @@ import { View } from "react-native";
 import RentNowView from "./app/partials/RentNowView";
 import NavigationBar from "./app/components/NavigationBar";
 import { globalStyles } from "./app/utils/style";
+import SettingsView from "./app/partials/SettingsView";
 
 export default function App() {
   return (
@@ -13,7 +14,8 @@ export default function App() {
       }}
     >
       {/* <RentNowView /> */}
-      <NavigationBar />
+      {/* <NavigationBar /> */}
+      <SettingsView />
     </View>
   );
 }
